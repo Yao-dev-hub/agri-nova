@@ -1,0 +1,106 @@
+/* Importation de liens prime react */
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+/* Thème */
+@import "primereact/resources/primereact.min.css";
+/* Composants */
+@import "primeicons/primeicons.css";
+/* Icônes */
+
+/* Style de page inscription */
+.logo {
+  text-shadow: 1px 1px 1px black;
+  color: rgb(74, 255, 46);
+}
+
+#inscription-acheteur {
+  background: rgb(128, 128, 128);
+}
+
+#banniere-inscription-acheteur {
+  background: #9292924b;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/login2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 88vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.bg-inscription {
+  background-color: rgb(255, 255, 255);
+  height: 88vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  /* Supprime l'ombre */
+  border-color: inherit !important;
+  /* Conserve la bordure par défaut */
+}
+
+.titre-inscription {
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  color: rgb(37, 187, 0);
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+#description-Inscription {
+  background-color: rgba(0, 0, 0, 0.367);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  transition: all 0.5s ease;
+}
+
+@media(max-width:992px) {
+  #banniere-inscription {
+    display: none
+  }
+
+  .bg-inscription {
+    border-radius: 5px;
+    background-color: white;
+    height: 100vh;
+  }
+
+  .inscription {
+    background: white;
+    padding: 0;
+  }
+}
+
+/* Loading Page */
+#div-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* style Inscription pour les vendeurs */
+
+#inscription-vendeur {
+  background: darkgreen;
+}
+
+#banniere-inscription-vendeur {
+  background: #9292924b;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sign-in3.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 88vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
