@@ -8,7 +8,7 @@ function page() {
 
 
     return (
-        <div className='container-fluid '  id='inscription-acheteur'>
+        <div className='container-fluid ' id='inscription-acheteur'>
             <div className="container">
                 <div className="row p-lg-5">
                     <div className="container  d-flex justify-content-center align-items-center ">
@@ -20,11 +20,12 @@ function page() {
                                 <div className="col-lg-10 text-white" >
                                     <h5 className='mb-4'> Si vous êtes vendeur, utilisez le bouton <span className='fw-bold text-white'>vendeur</span> pour vous inscrire.</h5>
                                     <p className='mb-4'>Une fois inscrit(e), vous bénéficierez de tous les avantages de notre application pour vendre vos produits agricoles, gérer vos transactions, et atteindre une large communauté d'acheteurs en toute simplicité.</p>
-                                    <Link href="../marchand/sign-up" type='button' className="btn btn-success mt-2 fw-bold">vendeur <FaArrowCircleRight /></Link>
+                                    <Link href="../marchand/sign-up" type='button' className="btn btn-success mt-2 fw-bold">Vendeur <FaArrowCircleRight /></Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-lg-5 p-3 d-flex jusrify-content-center align-items-center bg-inscription" >
+                        <div className="col-12 col-lg-5 bg-inscription" >
+                            <h4 className='text-center fw-bold mb-4 titre-formulaire'>Créer un compte</h4>
                             <SignUpForm />
                         </div>
                     </div>

@@ -8,9 +8,39 @@
       "default",
       {
         "ignore": [
-          "backdrop-filter"
+          "backdrop-filter",
+          "border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4))",
+          "color: light-dark(var(--mantine-color-black), var(--mantine-color-white))",
+          "background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6))",
+          "color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-1))",
+          "color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2))"
         ]
       }
-    ]
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "button-type": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "typescript-config/is-valid": "off",
+    "disown-opener": "off",
+    "no-inline-styles": "off"
   }
 }

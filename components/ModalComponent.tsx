@@ -1,55 +1,30 @@
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
-import Modal from 'react-bootstrap/Modal';
+import React from "react";
+import { Dialog } from 'primereact/dialog';
+import { ModalType } from "@/types";
+import { FaCheck } from "react-icons/fa";
+import { Button } from 'primereact/button';
+import { useRouter } from "next/navigation";
 
+export default function ModalComponent({ visible, setVisible }: ModalType) {
 
-function ModalComponent() {
     const router = useRouter()
-    const [showModal, setshowModal] = useState(false)
 
-    useEffect(() => {
-        //On affiche le modal à 3 seconde après le lancement de la page
-        const timer = setTimeout(() => {
-            setshowModal(true)
-        }, 2000)
-        console.log(showModal)
-        //On nettoie le
-        return () => clearTimeout(timer)
-    }, [])
-
-    const closeModal = () => setshowModal(false)
-    const MarchandPage = () => router.push("/clients/users-pages/marchand/sign-up")
+    const login = () => {
+        router.push("/login")
+    }
 
     return (
-        <>
-
-            <Modal
-                show={showModal}
-                onHide={closeModal}
-                backdrop="static"
-                keyboard={false}
-                size='lg'
-                centered
-            >
-                <Modal.Header closeButton>
-                    <h6 className='fw-bold text-center h5'>Vous êtes sur la page d'inscription pour les acheteurs.</h6>
-                </Modal.Header>
-                <Modal.Body>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <Image src="/images/sign-in2.jpg" width={350} height={260} alt="une image" />
-                        </div>
-                        <div className="col-lg-6">
-                            <h5 className='mb-4'> Si vous êtes marchand, utilisez le bouton <span className='text-danger'>Page Marchand</span> pour vous inscrire..</h5>
-                            <p className='mb-4'>Une fois inscrit(e), vous bénéficierez de tous les avantages de notre application pour vendre vos produits agricoles, gérer vos transactions, et atteindre une large communauté d'acheteurs en toute simplicité.</p>
-                            <button type='button' className="btn btn-primary mt-2 form-control" onClick={MarchandPage}>page marchand</button>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>
-        </>
+        <div className="card flex justify-content-center">
+            <Dialog visible={visible} onHide={() => setVisible!(false)}
+                style={{ width: '50vw' }} breakpoints={{ '960px': '75vw', '641px': '100vw' }}>
+                <div className="row justify-content-center align-items-center">
+                    <h6 className="text-center text-success fw-bold"><FaCheck className="fs-1 me-2" /> Inscription réussie avec succès </h6>
+                    <p className="mt-2 fw-bold text-center text-primary">
+                        Votre compte a été créé avec succès. Un mail vous a été envoyé pour valider votre compte
+                    </p>
+                    <p className="text-center">Après avoir cliqué sur le lien qui vous a été envoyé , connezctez-vous en cliquant sur <span className="text-danger">Se connecter</span></p>
+                </div>
+            </Dialog>
+        </div>
     )
 }
-
-export default ModalComponent

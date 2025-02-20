@@ -6,6 +6,25 @@
 @import "primeicons/primeicons.css";
 /* Icônes */
 
+
+/* DropZone Style */
+
+.dropzone-dashed {
+  border: 2px dashed #ccc;
+  /* Bordure pointillée */
+  background-color: #f8f9fa;
+  /* Fond clair */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.dropzone-dashed:hover {
+  border-color: #007bff;
+  /* Couleur bleue au survol */
+}
+
 /* Style de page inscription */
 .logo {
   text-shadow: 1px 1px 1px black;
@@ -14,26 +33,34 @@
 
 #inscription-acheteur {
   background: rgb(128, 128, 128);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
 }
 
 #banniere-inscription-acheteur {
-  background: #9292924b;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/login2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 88vh;
+  height: 105vh;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  width: 700px;
 }
 
 .bg-inscription {
-  background-color: rgb(255, 255, 255);
-  height: 88vh;
+  background-color: white;
+  height: 105vh;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-control:focus {
@@ -60,23 +87,6 @@
   transition: all 0.5s ease;
 }
 
-@media(max-width:992px) {
-  #banniere-inscription {
-    display: none
-  }
-
-  .bg-inscription {
-    border-radius: 5px;
-    background-color: white;
-    height: 100vh;
-  }
-
-  .inscription {
-    background: white;
-    padding: 0;
-  }
-}
-
 /* Loading Page */
 #div-loading {
   display: flex;
@@ -90,17 +100,133 @@
 
 #inscription-vendeur {
   background: darkgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125vh;
 }
 
 #banniere-inscription-vendeur {
-  background: #9292924b;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/sign-in3.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 88vh;
+  height: 110vh;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  width: 700px;
+}
+
+.bg-inscription-vendeur {
+  background-color: white;
+  height: 110vh;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/************************* Style de login *******************************/
+/* syle login acheteur */
+
+.login-form {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0000001c;
+  background-color: white;
+}
+
+.login-banniere-achateur {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/images/sign-in2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 600px;
+}
+
+.bg-login {
+  background-color: rgba(188, 188, 188, 0.458);
+  height: 100vh;
+}
+
+
+/* All Product */
+.icon-search {
+  background: #ffffff00;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right-color: rgba(255, 255, 255, 0);
+}
+
+.form-style {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left-color: transparent;
+}
+
+.form-style:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media(max-width:992px) {
+  #banniere-inscription {
+    display: none
+  }
+
+  #inscription-vendeur {
+    background-color: white;
+  }
+
+  #inscription-acheteur {
+    background-color: white;
+  }
+
+
+  .bg-inscription,
+  .bg-inscription-vendeur {
+    border-radius: 5px;
+    background-color: white;
+    height: 115vh;
+    width: 100%;
+  }
+
+  #banniere-inscription-vendeur {
+    display: none;
+  }
+
+  #banniere-inscription-acheteur {
+    display: none;
+  }
+
+  .inscription {
+    background: white;
+    padding: 0;
+  }
+
+  .login-banniere-achateur {
+    display: none;
+  }
+
+  .login-form {
+    border: none;
+    height: 100vh;
+    width: 100%;
+  }
 }

@@ -1,4 +1,5 @@
 "use client"
+import AllProductComponent from "@/components/AllProductComponent";
 import LoadingPage from "@/components/LoadingPage";
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <LoadingPage />
-      <h1>Bienvenue sur notre site</h1>
+      <AllProductComponent />
     </div>
   )
 

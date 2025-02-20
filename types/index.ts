@@ -1,9 +1,6 @@
 export type ModalType = {
-    show?: boolean,
-    setShow?: React.Dispatch<React.SetStateAction<boolean>>,
-    closeModal?: () => void,
-    MarchandPage?: () => void,
-    OpenModal?: () => void
+    visible: boolean,
+    setVisible: ((value: boolean) => void) | undefined
 }
 
 export type LoadingType = {
